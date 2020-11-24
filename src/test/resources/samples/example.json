@@ -1,0 +1,191 @@
+{
+    "dossierMetadata": {
+        "dossierId": "45df9842-c0f9-418c-b047-5262ae30000f",
+        "processingStatus": "Successful",
+        "customerReferenceId": "945c083f-4ec5-46b0-891e-80fe0dea2314",
+        "createdDateTime": "2020-10-03T15:10:42.302478Z",
+        "version": "v2.1.0"
+    },
+    "evidence": [{
+            "type": "IdDocument",
+            "images": [{
+                    "data": "None",
+                    "customerReferenceId": "ceb0e4eb-217a-403d-8a4a-17321c28a3b0",
+                    "encodedData": "None",
+                    "imageId": "e9d67ed5-7048-4578-b490-7819f798c95a",
+                    "extractedData": {
+                        "dynamicProperties": "RmUYVxCGdP7jrjvEtwDiG2IgyfsLY78i8OtkuZ+AtMsjh67ar9uV4A8ZjeV4KRr6Lo1RRn7GwObFZNZ7pSVcfSV0NYyVoh7bPz6QvY1VU05fHXn2t12UzsHAjPkZXKemBop+/mSwoYmA/UEhd+yQy+rTEcb/MbER+n3Lg/IMNnIbDg4aeUKbgsuNtNduCESB5QxMWBUWyw3GgQLPhN3n1y4sd1NhCi5knjBVQzrzAMgHiQaqv/WS6LX8T2xpbp3NkrZWqBAzfGFzT4E/Isy1V6us/eFsEjTniVfHW+BrSLCVWx5zUvmTbNTrOsNF1jLSMvbTgSC8v9ZM3eA7whMvfk0w3P+3LqmMO+owhFSwNJrQatlO8gpcbbV8uD3rnW3n7i7fzNP6HUJe011AWvyiNkKLwjdjybhPN1AKD+oYA6gISSxHb6lf1R4mrddcm07ROvU6HdufTC4QHvxuYdACrfcBA7WeCDlvZA6V3BIfJoOkbirJIXWwofF6+N5FwUIFaqQFVPM5gdbT3wnpfRlEGCc+LUBniL711S4sAM8X4iE5rCvDHBmqib8phF7BD09YX1Iqbkkg8MIUWmXQtJRKxerAl2pcAMycfhLNxc8/9wOEDRUKTVoaLWy8x51bPeJcaT1xvQqQHbHqhrs6kqqsgGkJJy4+ze4RTAzTDshLx8/BkA1dXJe42ALr/920iSpHNQLoxqfGHnGSFsm5kmE9Rrn8KdH+tVqzNckRNfulSDVgwb1hAiQL+nN+bVoOl2GoC5zL5+vUKlpp1bWQpDqHFpJm0b7rA8yKHoX8XRlHU/uluXi7oCuJV3U7cS2aLOBQ38RmNUHzLjF2E3mJvySGW7wrQPaaBe2djP7ecq2Ry6/D3mRj9ev/NMxDdQwLefYXXqezvYh+tj/xcu48QheLcBWqxHs3MOZ8OfSTk/CpS0YexP9wpd0R8S9I5z9FUIjsJ7iLSRzkEC8AgrAT2QQQ/sL6wB/YlEWid6wdURBoo1ZpYcRmmvw8Pbb0oR9H2S4Wn7TYnLsQJSNtAv7Wnp7z/X0xdtnX5JcVkT07mdsho7cPsCaCVEQ2agujO0Q4egb6+yMjTIoK9lPQpJyCgVIPF5TtV4RtrPb0HKWFxRRSDUCiN40Uook34hAd/vlRJ4mImZC/ASyjFOmVDETcRHBLFSE3I4JMVvGt4omSLAfG8GVY61sbiedWm6ekNrvBoHgwnxYJCszx0c+4iO/b2Na2B5dzBQivF3bg3AoMcJ0e7RqWA3q2lHwR+HyOY8XTfNlkyqCyoKvkryJ8271pdSKRHmR4Ux2QFVuonlpidzYO1EsutUPlQd7zq1hmExwxDT2N6TlAFCBvonBk908TV0TdabxmBy2UjNUnws/lP46d2iMbKgKWNs1YAY7poTMyFC20QS7tcpKqw2U0cawTOkWZXIdWV/8HD15ykLSXFx5LsxzvvcoRBmMEzeBMBlA5SM//jZvS7gA5x9s=",
+                        "name": {
+                            "dynamicProperties": "kddSM1vXIsE70GQ6vtturOlffXkckT1oQUsOBPew/E4qDg==",
+                            "givenNames": "fqgoDnHTIN7QouwJHNqqLtZROAX1Va/3DjQ8Yv4gIy8/WMm76J+T1noSPw==",
+                            "surname": "BRRYKH5MF4/SdDxjk4oQbokty8OGaL/uH+MwEbvlhq1K7Tkfnx/p",
+                            "fullName": "cbsuJo7DtP8Twif0t6JwvjLfx9nYAPccaSwa/HTCwjBiT48P6DhTr4dWlUrkkjmW/j0Q"
+                        },
+                        "address": {
+                            "dynamicProperties": "gO0PdMmTMOoGTfdjZMaidapWEIzua8tyf7EHE7bAe+9HMw==",
+                            "addressLine1": "None",
+                            "addressLine2": "None",
+                            "addressLine3": "None",
+                            "addressLine4": "None",
+                            "country": "None",
+                            "city": "None",
+                            "stateProvince": "None",
+                            "postalCode": "None"
+                        },
+                        "documentNumber": "557SwGtXpgjLyWZEjswulxRB+mt4YKjfIXrITw9FDez67qXuQILi7SM=",
+                        "dateOfBirth": "GM1HUooPXFhzyczJuIQIg/IxSCBJ+gUGF9dsN/k80yVt9PlTAzzjXiRW",
+                        "dateOfIssue": "Z9VfiQxLLxt6hJ5jaGtAMtZjX8RnLIXRJyOk5hctaa1zXrLxUZgO6OmI",
+                        "dateOfExpiry": "wKQegrkhPy4ckf4IbsaZTz5HdjxVaBtv5wBkRwq64bV/mrjYArf4X4U9"
+                    },
+                    "processingStatus": "Successful",
+                    "classification": {
+                        "mdsid": "szIs5lrrEpBH5PY7+4nNTK8B62o1yYBAGxdHm3ifTGQdwHynWItpZB+hHH1ziwCElfIks05i",
+                        "imageType": "PassportPicturePage"
+                    },
+                    "derivedImages": {
+                        "croppedPortrait": "None",
+                        "croppedDocument": "None",
+                        "croppedSignature": "None"
+                    },
+                    "processingReasons": {}
+                }
+            ],
+            "evidenceId": "82ff496e-e862-4a3b-bdee-1f905d435a1f",
+            "extractedData": {
+                "dynamicProperties": "2sp31vdBkitgYyq7aRXQ7ssSDgB6Dxofiq6byhsSRFJT2xAJJas7aZu0LvKSyx3DaZcgMRc/VcBqHoYqu5xPkyWhhAynabOrlOkHgUo/8/0zmIYYDgKTXbkAEGBa3eaJoISDy4Nqqj91yex18zfKRX+v//OYBst/eclVtql/Ph6QCVwJx5lAeOtzea8r7jaxPzgW0HfKUk1GrdOjZziH7mR5gLxUjQdjdBSVegNscaNda861PGJgphI9VKZP4PDL+KUVcxNfgCfkimTCSmKghmTRkB64LDn399Y3rValRcxR7GqrHqc3K8KK0x8E1RMPBh/XexY+s9Oue0IMDJXobIApnbdjrjacDvC3hUYn07+CRkx+aFDnl3frBSP1gJHhLNSlXkFP8JkTTk3OagIlRr5/4x+8oDffgrMZd6ICLCA3qPgXeM408fI=",
+                "name": {
+                    "dynamicProperties": "4csV6DZ3MyIcAr88A1e9vb4Kx3ITAmDd78/xx7+kXuht1g==",
+                    "givenNames": "lIBwF9E9rLnbNvDhiuF2cnMaxG7ZpoaLyLYp4bg4CWHhybBFy3QRsLn9jQ==",
+                    "surname": "iRgwI+NX3TGkb/c+Qn70XUbgdfZHOeV0gScWRLxX805aZaIOyiEP",
+                    "fullName": "GeUv/OewuYziPZIKIqoiLA0PpYNBPdN9Exm+CJF0SLmt2bwzgrlVyoKuoN6Plsjik8xr"
+                },
+                "address": {
+                    "dynamicProperties": "3BO8bmof4LgoFjfqd0b6IM2C/Zg26DUBtVT49so6Pt9tkA==",
+                    "addressLine1": "None",
+                    "addressLine2": "None",
+                    "addressLine3": "None",
+                    "addressLine4": "None",
+                    "country": "None",
+                    "city": "None",
+                    "stateProvince": "None",
+                    "postalCode": "None"
+                },
+                "documentNumber": "3nglrf+Ztc/hnw+3uOf24x3yqp884KHB9vtGHu4A+FYCpae/QIGRylU=",
+                "dateOfBirth": "xrI7KinBMHdIHgTbq60l5P2elkV6T7I5k5XBvleG+/hBBz9FtecQ2i/z",
+                "dateOfIssue": "ApMciH4yp2WYybcdwDvTohqgX0Z40IYXAqEc4aBuWpqKpn0k8w0UHx4C",
+                "dateOfExpiry": "UGQn7GYawM5UiUDv3vNqaJIQJlIZhOZRz4JcuPI4RJhzCkI+vNCt4YO+"
+            }
+        }, {
+            "type": "Biometric",
+            "images": "None",
+            "evidenceId": "ae27c20d-066c-4522-a266-8bb0bd6aeb0b",
+            "extractedData": "None"
+        }
+    ],
+    "findings": {
+        "authenticated": "True",
+        "probability": 780,
+        "verifications": [{
+                "verificationType": 102,
+                "name": "Black And White Copy",
+                "judgement": "Authentic",
+                "probability": 780,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 105,
+                "name": "Image Classification",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 700,
+                "name": "Data Comparison",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 300,
+                "name": "Human Face Presence",
+                "judgement": "Authentic",
+                "probability": 988,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 707,
+                "name": "Field Validation",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 101,
+                "name": "ID Document Blacklist",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 104,
+                "name": "Generic Font",
+                "judgement": "Authentic",
+                "probability": 973,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 601,
+                "name": "MRZ Check Digit",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 600,
+                "name": "MRZ Font Type Authentication",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "3.20.0.1541",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 710,
+                "name": "Image Processing",
+                "judgement": "Authentic",
+                "probability": 1000,
+                "notifications": {},
+                "version": "1.0",
+                "documentId": "e9d67ed5-7048-4578-b490-7819f798c95a"
+            }, {
+                "verificationType": 301,
+                "name": "Face Comparison",
+                "judgement": "Authentic",
+                "probability": 997,
+                "notifications": {},
+                "version": "1.0",
+                "documentId": "82ff496e-e862-4a3b-bdee-1f905d435a1f"
+            }
+        ]
+    },
+    "configuration": {
+        "verifications": {
+            "verificationType": 0,
+            "name": "None",
+            "judgement": "None",
+            "probability": 0,
+            "notifications": "None",
+            "version": "None",
+            "documentId": "None"
+        },
+        "responseImages": []
+    }
+}
