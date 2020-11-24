@@ -18,17 +18,9 @@ import net.thisptr.jackson.jq.Versions;
 import net.thisptr.jackson.jq.exception.JsonQueryException;
 
 import org.apache.hadoop.hive.ql.exec.Description;
-import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
-import org.apache.hadoop.hive.ql.exec.UDFArgumentLengthException;
+import org.apache.hadoop.hive.ql.exec.UDF;
 import org.apache.hadoop.hive.ql.metadata.HiveException;
-import org.apache.hadoop.hive.ql.udf.generic.GenericUDF;
-import org.apache.hadoop.hive.serde2.objectinspector.ConstantObjectInspector;
-import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
-import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector.Category;
-import org.apache.hadoop.hive.serde2.objectinspector.PrimitiveObjectInspector;
-import org.apache.hadoop.hive.serde2.objectinspector.PrimitiveObjectInspector.PrimitiveCategory;
-import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
-import org.apache.hadoop.hive.serde2.objectinspector.primitive.StringObjectInspector;
+import org.apache.hadoop.io.Text;
 
 /**
  * Provides access to JSON Query (JQ), see
@@ -38,13 +30,12 @@ import org.apache.hadoop.hive.serde2.objectinspector.primitive.StringObjectInspe
     + "  jq(json, '.rows[0]')" + "Arguments:\n" + "  jq(<json_data>, <jq_expression>)\n"
     + "    <json_data>     - a valid JSON structure stored as a STRING\n"
     + "    <jq_expression> - the jq expression to apply to the <json_data>\n")
-public class JsonQueryUDF extends GenericUDF {
+public class JsonQueryUDF extends UDF {
   private final JsonFactory jsonFactory = new JsonFactory();
   private final ObjectMapper objectMapper = new ObjectMapper(jsonFactory);
 
-  private StringObjectInspector jsonStringInspector, jqStringInspector;
   private Scope rootScope;
-  private JsonQuery constQuery;
+  private final transient Text result = new Text();
 
   public JsonQueryUDF() {
     // First of all, you have to prepare a Scope which s a container of
@@ -65,8 +56,7 @@ public class JsonQueryUDF extends GenericUDF {
     // request, etc).
   }
 
-  @Override
-  public Object evaluate(DeferredObject[] arguments) throws HiveException {
+  public Text evaluate(String json, String jqExpr) throws HiveException {
     try {
       // Creating a child Scope is a very light-weight operation that just allocates a
       // Scope and sets
@@ -84,16 +74,11 @@ public class JsonQueryUDF extends GenericUDF {
       // JsonQuery instance
       // is immutable and thread-safe. It should be reused as possible if you
       // repeatedly use the same expression.
-      JsonQuery jsonQuery = constQuery;
-      if (constQuery == null) {
-        String jq = this.jqStringInspector.getPrimitiveJavaObject(arguments[1].get());
-        jsonQuery = JsonQuery.compile(jq, Versions.JQ_1_5);
-      }
+      JsonQuery jsonQuery = JsonQuery.compile(jqExpr, Versions.JQ_1_5);
 
       // You need a JsonNode to use as an input to the JsonQuery. There are many ways
       // you can grab a JsonNode.
       // In this example, we just parse a JSON text into a JsonNode.
-      String json = this.jsonStringInspector.getPrimitiveJavaObject(arguments[0].get());
       JsonNode in = objectMapper.readTree(json);
 
       // Finally, JsonQuery#apply(...) executes the query with given input and
@@ -103,12 +88,13 @@ public class JsonQueryUDF extends GenericUDF {
       final List<JsonNode> out = new ArrayList<JsonNode>();
       jsonQuery.apply(childScope, in, out::add);
       if (out.size() == 1 && out.get(0) instanceof TextNode) {
-        return ((TextNode) out.get(0)).textValue();
+        result.set(((TextNode) out.get(0)).textValue());
       } else {
-        return out.stream()
+        result.set(out.stream()
           .map(n -> String.valueOf(n))
-          .collect(Collectors.joining());
+          .collect(Collectors.joining()));
       }
+      return result;
     } catch (JsonQueryException jqe) {
       throw new HiveException(jqe);
     } catch (JsonMappingException jme) {
@@ -118,40 +104,5 @@ public class JsonQueryUDF extends GenericUDF {
     } catch (NullPointerException npe) {
       return null;
     }
-  }
-
-  @Override
-  public ObjectInspector initialize(ObjectInspector[] arguments) throws UDFArgumentException {
-    if (arguments.length != 2) {
-      throw new UDFArgumentLengthException("This UDF takes exactly 2 arguments.");
-    }
-    for (int i = 0; i < arguments.length; i++) {
-      ObjectInspector oi = arguments[i];
-      Category category = oi.getCategory();
-      PrimitiveCategory primitive = ((PrimitiveObjectInspector) oi).getPrimitiveCategory();
-      if (!category.equals(Category.PRIMITIVE) || primitive != PrimitiveCategory.STRING) {
-        throw new UDFArgumentException("This UDF only except STRING parameters.");
-      }
-    }
-    // Remember the two object inspectors to access the actual function parameters
-    jsonStringInspector = (StringObjectInspector) arguments[0];
-    jqStringInspector = (StringObjectInspector) arguments[1];
-    // Check if the jq expression is fixed and remember it for later
-    ObjectInspector rightArg = arguments[1];
-    if (rightArg instanceof ConstantObjectInspector) {
-      String jq = ((ConstantObjectInspector) rightArg).getWritableConstantValue().toString();
-      try {
-        constQuery = JsonQuery.compile(jq, Versions.JQ_1_5);
-      } catch (JsonQueryException e) {
-        throw new UDFArgumentException("Failed to compile jq expression.");
-      }
-    }
-    // Return a STRING primitive since that is what this UDF returns
-    return PrimitiveObjectInspectorFactory.writableStringObjectInspector;
-  }
-
-  @Override
-  public String getDisplayString(String[] arg0) {
-    return "jq(" + arg0[0] + ")";
   }
 }
